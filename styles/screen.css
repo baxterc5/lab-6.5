@@ -1,56 +1,82 @@
+/* Base body styles without a background image */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2d8a1;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  
-  .flex-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .content {
-    text-align: center;
-  }
-  
-  .page-title {
-    font-size: 3rem;
-    color: #ab6429;
-    margin-bottom: 1.5rem;
-  }
-  
-  .name-generator {
-    background-color: #c0d4b5;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative; /* Needed for the absolutely positioned background */
+  color: #e0e0e0;
+}
 
-  .name-display {
-    font-size: 2rem;
-    color: #ab6429;
-    margin-bottom: 1rem;
-  }
-  
-  .name-button {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    background-color: #cb8140;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .name-button:hover {
-    background-color: #dfbe80; 
-  }
-  
+/* Background image container with blur effect */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/images/\ -70.jpg') no-repeat center center fixed;
+  background-size: cover;
+  filter: blur(8px);
+  z-index: -1; /* Place behind the content */
+}
+
+/* Flex container for centering content */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Content container with a semi-transparent dark overlay */
+.content {
+  text-align: center;
+  background-color: #272811;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Page title styling */
+.page-title {
+  font-size: 3rem;
+  color: #e0e0e0;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Name generator container styling */
+.name-generator {
+  background-color: #131314;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Styling the name display with a fantasy accent color */
+.name-display {
+  font-size: 2rem;
+  color: #7b854e;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Button styling */
+.name-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #444a18;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.name-button:hover {
+  background-color: #563a1e;
+}
