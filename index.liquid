@@ -18,21 +18,21 @@ title: Name Generator
 <script>
   function randomName() {
     return {
-      // Array of 10 names provided
+      // Array of fantasy names with titles
       names: [
-        "Alice",
-        "Rosemary",
-        "Charlie",
-        "Daisy",
-        "Edward",
-        "Arabella",
-        "Jasper",
-        "Quinne",
-        "Victor",
-        "Ivy"
+        "Gandalf the Great",
+        "Eldric the Magnificent",
+        "Tharion the Timeless",
+        "Lysandra the Luminous",
+        "Brom the Bold",
+        "Elowen the Enchantress",
+        "Dorian the Daring",
+        "Isolde the Illustrious",
+        "Garrick the Gallant",
+        "Seraphine the Serene"
       ],
       currentName: "",
-      // Function to randomly select a name from the array
+      // Function to randomly select a name
       generateName() {
         const index = Math.floor(Math.random() * this.names.length);
         this.currentName = this.names[index];
