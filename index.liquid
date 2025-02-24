@@ -1,51 +1,111 @@
 ---
 layout: layout.liquid
-title: Fantasy Name Generator
+title: Skyrim Character Generator
 ---
 
 <div class="flex-container">
   <div class="content">
-    <h1 class="page-title">Fantasy Name Generator</h1>
+    <h1 class="page-title">Skyrim Character Generator</h1>
     
-    <!-- Random Name Generator Component -->
     <div class="name-generator" x-data="randomName()">
       <h2 class="name-display" x-text="currentName || 'Click the button to generate a name!'"></h2>
-      <button class="name-button" @click="generateName()">Generate Random Name</button>
+      <button class="name-button" @click="generateName()">Generate Name</button>
     </div>
+    
+    <div style="height: 2rem;"></div>
+    
+    <div class="name-generator" x-data="randomRace()">
+      <h3 class="page-title" style="font-size:2.5rem; margin-bottom:0.5rem;">Race</h3>
+      <h2 class="name-display" x-text="currentRace || 'Click the button to generate a race!'"></h2>
+      <button class="name-button" @click="generateRace()">Generate Race</button>
+    </div>
+    
+    <div style="height: 2rem;"></div>
+    
+    <div class="name-generator" x-data="randomMagicka()">
+      <h3 class="page-title" style="font-size:2.5rem; margin-bottom:0.5rem;">Magicka Class</h3>
+      <h2 class="name-display" x-text="currentMagicka || 'Click the button to generate a Magicka Class!'"></h2>
+      <button class="name-button" @click="generateMagicka()">Generate Magicka Class</button>
+    </div>
+    
   </div>
 </div>
 
 <script>
   function randomName() {
     return {
-      // Array of fantasy names with titles
       names: [
-        "Gandalf the Great",
-        "Eldric the Magnificent",
-        "Tharion the Timeless",
-        "Lysandra the Luminous",
-        "Brom the Bold",
-        "Elowen the Enchantress",
-        "Dorian the Daring",
-        "Isolde the Illustrious",
-        "Garrick the Gallant",
-        "Seraphine the Serene",
-        "Quinne the Swift",
-        "Chloe the Mystic",
-        "Avary the Valiant",
-        "Lorian the Shadowborn",
-        "Celestine the Arcane",
-        "Thorne the Ironheart",
-        "Evelyn the Moonlit",
-        "Draven the Duskwalker",
-        "Fiora the Flamekeeper",
-        "Merrick the Whispering"
+        "Gandalf",
+        "Eldric",
+        "Tharion",
+        "Lysandra",
+        "Brom",
+        "Elowen",
+        "Dorian",
+        "Isolde",
+        "Garrick",
+        "Seraphine",
+        "Quinne",
+        "Chloe",
+        "Avary",
+        "Lorian",
+        "Celestine",
+        "Thorne",
+        "Evelyn",
+        "Draven",
+        "Fiora",
+        "Merrick"
       ],
       currentName: "",
-      // Function to randomly select a name
       generateName() {
         const index = Math.floor(Math.random() * this.names.length);
         this.currentName = this.names[index];
+      }
+    };
+  }
+  
+  function randomRace() {
+    return {
+      races: [
+        "Khajit",
+        "Argonian",
+        "Wood Elf",
+        "Redguard",
+        "Orc",
+        "Imperial",
+        "Breton",
+        "Nord",
+        "Bosmer Elf",
+        "Dunmer",
+        "Wood Elf",
+        "Dwemer",
+        "Vampire",
+        "Snow Elf",
+        "Dremora",
+        "Daedra"
+      ],
+      currentRace: "",
+      generateRace() {
+        const index = Math.floor(Math.random() * this.races.length);
+        this.currentRace = this.races[index];
+      }
+    };
+  }
+  
+  function randomMagicka() {
+    return {
+      classes: [
+        "Destruction",
+        "Illusion",
+        "Alteration",
+        "Enchanting",
+        "Restoration",
+        "Conjuring"
+      ],
+      currentMagicka: "",
+      generateMagicka() {
+        const index = Math.floor(Math.random() * this.classes.length);
+        this.currentMagicka = this.classes[index];
       }
     };
   }
