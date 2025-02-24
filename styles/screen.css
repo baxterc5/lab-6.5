@@ -1,4 +1,3 @@
-/* Base body styles without a background image */
 @font-face {
   font-family: 'Wizard';
   src: url("/fonts/WizardryNight.ttf") format('truetype');
@@ -14,11 +13,10 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  position: relative; /* Needed for the absolutely positioned background */
+  position: relative;
   color: #e0e0e0;
 }
 
-/* Background image container with blur effect */
 .background {
   position: fixed;
   top: 0;
@@ -28,10 +26,9 @@ body {
   background: url("/images/\ -70.jpg") no-repeat center center fixed;
   background-size: cover;
   filter: blur(8px);
-  z-index: -1; /* Place behind the content */
+  z-index: -1;
 }
 
-/* Flex container for centering content */
 .flex-container {
   display: flex;
   flex-direction: column;
@@ -39,7 +36,6 @@ body {
   width: 100%;
 }
 
-/* Content container with a semi-transparent dark overlay */
 .content {
   text-align: center;
   background-color: #272811;
@@ -48,7 +44,6 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Page title styling */
 .page-title {
   font-size: 3rem;
   color: #e0e0e0;
@@ -56,7 +51,6 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* Name generator container styling */
 .name-generator {
   background-color: #131314;
   padding: 2rem;
@@ -64,7 +58,6 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* Styling the name display with a fantasy accent color */
 .name-display {
   font-size: 2rem;
   color: #7b854e;
@@ -72,7 +65,6 @@ body {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
-/* Button styling */
 .name-button {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
