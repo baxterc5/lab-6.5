@@ -1,50 +1,62 @@
+/* Center the page content using Flexbox */
 body {
-    font-family: Helvetica, sans-serif;
-    color: #EAE8FF;
-    background: #2D3142;
-    padding: 0 40px;
-    text-align: center;
-}
-
-nav {
-    margin: 40px auto 0 auto;
-    width: 250px;
-    border-radius: 50px;
-    background: #212431;
-}
-
-nav ul {
-    display: flex;
-    justify-content: space-evenly;
+    font-family: Arial, sans-serif;
+    background-color: #f2d8a1; /* Light pastel background */
     margin: 0;
     padding: 0;
-}
-
-nav ul li {
-    list-style-type: none;
-    margin: 0;
-}
-
-nav ul li a {
-    display: inline-block;
-    padding: 20px;
-    color: #EAE8FF;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-h1 {
-    font-size: 8em;
-    letter-spacing: -2px;
-}
-
-h1 strong {
-    background: rgb(34,193,195);
-    background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-img.about {
-    opacity: 0.5;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  /* Flex container for centering the content */
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  /* Page title styling */
+  .page-title {
+    font-size: 3rem;
+    color: #ab6429; /* Rich, dark tone for contrast */
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Name generator container styling */
+  .name-generator {
+    background-color: #c0d4b5; /* Gentle minty tone */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Name display styling */
+  .name-display {
+    font-size: 2rem;
+    color: #ab6429;
+    margin-bottom: 1rem;
+  }
+  
+  /* Button styling */
+  .name-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #cb8140; /* Warm inviting tone */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .name-button:hover {
+    background-color: #dfbe80; /* Lighter tone on hover */
+  }
+  

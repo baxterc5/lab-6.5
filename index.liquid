@@ -1,13 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ title }}</title>
-    <!-- Include Alpine.js -->
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  </head>
-  <body>
-    {{ content }}
-  </body>
-</html>
+---
+layout: layout.liquid
+title: Name Generator
+---
+
+<div class="flex-container">
+  <div class="content">
+    <h1 class="page-title">Name Generator</h1>
+    
+    <!-- Random Name Generator Component -->
+    <div class="name-generator" x-data="randomName()">
+      <h2 class="name-display" x-text="currentName || 'Click the button to generate a name!'"></h2>
+      <button class="name-button" @click="generateName()">Generate Random Name</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function randomName() {
+    return {
+      // Array of 10 names provided
+      names: [
+        "Alice",
+        "Rosemary",
+        "Charlie",
+        "Daisy",
+        "Edward",
+        "Arabella",
+        "Jasper",
+        "Quinne",
+        "Victor",
+        "Ivy"
+      ],
+      currentName: "",
+      // Function to randomly select a name from the array
+      generateName() {
+        const index = Math.floor(Math.random() * this.names.length);
+        this.currentName = this.names[index];
+      }
+    };
+  }
+</script>
