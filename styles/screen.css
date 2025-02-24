@@ -1,7 +1,6 @@
-/* Center the page content using Flexbox */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2d8a1; /* Light pastel background */
+    background-color: #f2d8a1;
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,7 +9,6 @@ body {
     height: 100vh;
   }
   
-  /* Flex container for centering the content */
   .flex-container {
     display: flex;
     flex-direction: column;
@@ -22,33 +20,29 @@ body {
     text-align: center;
   }
   
-  /* Page title styling */
   .page-title {
     font-size: 3rem;
-    color: #ab6429; /* Rich, dark tone for contrast */
+    color: #ab6429;
     margin-bottom: 1.5rem;
   }
   
-  /* Name generator container styling */
   .name-generator {
-    background-color: #c0d4b5; /* Gentle minty tone */
+    background-color: #c0d4b5;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-  
-  /* Name display styling */
+
   .name-display {
     font-size: 2rem;
     color: #ab6429;
     margin-bottom: 1rem;
   }
   
-  /* Button styling */
   .name-button {
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
-    background-color: #cb8140; /* Warm inviting tone */
+    background-color: #cb8140;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -57,6 +51,6 @@ body {
   }
   
   .name-button:hover {
-    background-color: #dfbe80; /* Lighter tone on hover */
+    background-color: #dfbe80; 
   }
   
